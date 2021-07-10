@@ -1,11 +1,13 @@
 #include <stdio.h>
 
+void division(float one, float two);
+
 int main(){
     char operation;
     float one;
     float two;
 
-    printf("Enter the operator (+ - * /): ");
+    printf("Enter the operator (+ - * / %%): ");
     scanf("%c",&operation);
 
     printf("Enter two numbers(!!space key): ");
@@ -25,9 +27,18 @@ int main(){
     }
     else if(operation == '/')
     {
-        printf("%f / %f = %f\n", one, two,(one / two));
+        division(one, two);
     }
     return 0;
 }
 
-
+void division(float one, float two){
+    if ((int)two == 0)
+    {
+        printf("divide by zero error not possible...");
+    }
+    else
+    {
+        printf("%f / %f = %f\n", one, two,(one / two));
+    }
+}
