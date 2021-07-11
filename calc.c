@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+void operation_calc(float one, float two, char operation);
 void division(float one, float two);
 void modulo(float one, float two);
 int	ft_recursive_factorial(int nb);
@@ -23,8 +24,13 @@ int main()
     {
     printf("Enter two numbers(!!space key): ");
     scanf("%e %e",&one, &two);
+    operation_calc(one, two, operation);
     }
-    
+    return (0);
+}
+
+void operation_calc(float one, float two, char operation)
+{
     if(operation == '+')
     {
         printf("%f + %f = %f\n", one, two,(one + two));
@@ -45,7 +51,6 @@ int main()
     {
         modulo(one, two);
     }
-    return 0;
 }
 
 void division(float one, float two)
@@ -64,12 +69,10 @@ void modulo(float one, float two)
 {
     if ((int)two == 0)
     {
-        printf("divide by zero error not possible...");
+        printf ("divide by zero error not possible...");
     }
     else
-    {
-        printf("%f %% %f = %d\n", one, two,((int)one % (int)two));
-    }
+        printf("%f %% %f = %d\n", one, two, ((int)one % (int)two));
 }
 
 int	ft_recursive_factorial(int nb)
