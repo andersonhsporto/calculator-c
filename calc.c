@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int		ft_recursive_factorial(int	nb);
+int	ft_recursive_factorial(int	nb);
 void	operation_calc(float	one, float	two, char	operation);
 void	division(float	one, float	two);
 void	modulo(float	one, float	two);
@@ -10,7 +10,7 @@ int	main(void)
 	char	operation;
 	float	one;
 	float	two;
-
+// input the operator (char)
 	printf ("Enter the operator (+ - * / %% !): ");
 	scanf ("%c", &operation);
 	if (operation == '!')
@@ -64,6 +64,7 @@ void	division(float one, float two)
 	}
 }
 
+// find rest of division (modulo) and return erro message!
 void	modulo(float one, float two)
 {
 	if ((int)two == 0)
@@ -74,6 +75,7 @@ void	modulo(float one, float two)
 		printf("%f %% %f = %d\n", one, two, ((int)one % (int)two));
 }
 
+//copy of factorial function
 int	ft_recursive_factorial(int nb)
 {
 	if (nb < 0)
