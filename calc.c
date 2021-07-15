@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//prototypes 
 int	ft_recursive_factorial(int	nb);
 void	operation_calc(float	one, float	two, char	operation);
 void	division(float	one, float	two);
